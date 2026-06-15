@@ -15,6 +15,11 @@ class comp {
 
         return result;
     }
+    comp operator+(int other){
+        comp result = comp(real + other, im);
+
+        return result;
+    }
 
     void pretty_print(){
         cout << real << " + " << im << "i" << endl;
@@ -42,7 +47,10 @@ int main(){
     comp c2 = comp (0, 8);
     comp c3 =  c1 + c2;
 
+    comp c4 = c1 +7;
     c3.pretty_print();
+
+    c4.pretty_print();
 
     number a;
     a.x = 4;
