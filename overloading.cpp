@@ -20,11 +20,26 @@ class comp {
 
         return result;
     }
+    comp operator-(comp other){
+        comp result = comp(real - other.real, im - other.im);
+
+        return result;
+    }
+     comp operator-(int other){
+        comp result = comp(real - other, im);
+
+        return result;
+    }
 
     void pretty_print(){
         cout << real << " + " << im << "i" << endl;
     }
 };
+
+comp operator+(int a, comp b){
+    return comp(a +b .real, b.im);
+}
+
 class number{
     public:
     int x;
@@ -51,6 +66,11 @@ int main(){
     c3.pretty_print();
 
     c4.pretty_print();
+
+    (c2-c1).pretty_print();
+
+
+    comp c5 = 7 + c1; //by default we dont have code to do a normal num + a complex
 
     number a;
     a.x = 4;
