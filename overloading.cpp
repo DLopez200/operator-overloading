@@ -37,7 +37,7 @@ class comp {
 };
 
 comp operator+(int a, comp b){
-    return comp(a +b .real, b.im);
+    return comp(a +b .real, b.im); //
 }
 
 class number{
@@ -49,6 +49,13 @@ class number{
         result.x = x +b.x;
         return result;
     }
+
+    bool operator<(number b) {
+        return x <b.x;
+    }
+    bool operator==(number b){
+        return x == b.x;
+    }
 };
 
 int main(){
@@ -57,6 +64,10 @@ int main(){
     arr[123];
     cout <<12;
     f();*/
+
+    string s;
+    string s2;
+    s < s2;
 
     comp c1 = comp (1, 2);
     comp c2 = comp (0, 8);
